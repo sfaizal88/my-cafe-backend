@@ -14,7 +14,8 @@ const router = express.Router();
 router.get('/getAllCafeShop', cafeShopController.getAllCafeShops);
 router.get('/getAllCafeShopOptions', cafeShopController.getAllCafeShopsOptions);
 router.get('/getCafeShopDetailsById', cafeShopController.getCafeShopDetailsById);
-router.post('/submitShopCafe', cafeShopController.submitShopCafe);
+router.post('/createShopCafe', cafeShopController.createShopCafe);
+router.put('/updateShopCafe', cafeShopController.updateShopCafe);
 router.delete('/deleteShopCafeById', cafeShopController.deleteShopCafeById);
 
 module.exports = router;

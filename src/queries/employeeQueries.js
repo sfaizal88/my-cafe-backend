@@ -4,10 +4,10 @@
  * @date - 25th August 2024
  */
 // GET ALL EMPLOYEES LIST QUERY
-const SELECT_ALL_EMPLOYEE= 'SELECT c.name as cafe_shop_name, e.cafe_shop_id, e.id, e.name, e.email_address, e.phone_number, e.gender, e.job_start_date, e.date_created, e.date_updated FROM Cafes c LEFT JOIN Employees e ON c.id = e.cafe_shop_id GROUP BY c.id;';
+const SELECT_ALL_EMPLOYEE= 'SELECT c.name as cafe_shop_name, e.cafe_shop_id, e.id, e.name, e.email_address, e.phone_number, e.gender, e.job_start_date, e.date_created, e.date_updated FROM Employees e LEFT JOIN Cafes c ON e.cafe_shop_id = c.id;';
 
 // GET EMPLOYEE BY ID QUERY
-const SELECT_EMPLOYEE_BY_ID = 'SELECT c.name as cafe_shop_name, e.cafe_shop_id, e.id, e.name, e.email_address, e.phone_number, e.gender, e.job_start_date, e.date_created, e.date_updated FROM Cafes c LEFT JOIN Employees e ON c.id = e.cafe_shop_id and e.id = ? GROUP BY c.id;';
+const SELECT_EMPLOYEE_BY_ID = 'SELECT c.name as cafe_shop_name, e.cafe_shop_id, e.id, e.name, e.email_address, e.phone_number, e.gender, e.job_start_date, e.date_created, e.date_updated FROM Employees e LEFT JOIN Cafes c ON e.cafe_shop_id = c.id WHERE e.id = ?';
 
 // DELETE EMPLOYEE BY ID QUERY
 const DELETE_EMPLOYEE_BY_ID = 'DELETE FROM Employees WHERE id = ?';
