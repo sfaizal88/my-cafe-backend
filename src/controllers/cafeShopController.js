@@ -22,17 +22,6 @@ exports.getAllCafeShops = async (req, res) => {
     }
 };
 
-// GET API FOR OPTIONS
-exports.getAllCafeShopsOptions = async (req, res) => {
-    // res.json({ok: true, data: cafeShop});
-    try {
-        const [results] = await db.query(queries.SELECT_ALL_CAFE_SHOP_OPTIONS);
-        res.status(200).json({ ok: true, output: results });
-    } catch (err) {
-        return res.status(500).json({ ok: false, error: err.message });
-    }
-};
-
 // GET API BY ID
 exports.getCafeShopDetailsById = async (req, res) => {
     const id = req.query.id;

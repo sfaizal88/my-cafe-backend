@@ -12,9 +12,6 @@ const SELECT_CAFE_SHOP_BY_ID = 'SELECT c.id, c.name, c.description, c.location, 
 // DELETE CAFE SHOP BY ID QUERY
 const DELETE_CAFE_SHOP_BY_ID = 'DELETE FROM Cafes WHERE id = ?';
 
-// FETCH CAFE SHOP LIKE OPTIONS QUERY
-const SELECT_ALL_CAFE_SHOP_OPTIONS = 'SELECT id as value, name as label FROM Cafes';
-
 // INSERT CAFE SHOP QUERY
 const INSERT_CAFE_SHOP = `
     INSERT INTO Cafes (id, name, description, location, date_created)
@@ -34,5 +31,4 @@ module.exports = {
     DELETE_CAFE_SHOP_BY_ID,
     INSERT_CAFE_SHOP,
     UPDATE_CAFE_SHOP_BY_ID,
-    SELECT_ALL_CAFE_SHOP_OPTIONS
 };

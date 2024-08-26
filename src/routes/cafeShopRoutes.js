@@ -12,7 +12,6 @@ const router = express.Router();
 
 // API METHODS
 router.get('/getAllCafeShop', cafeShopController.getAllCafeShops);
-router.get('/getAllCafeShopOptions', cafeShopController.getAllCafeShopsOptions);
 router.get('/getCafeShopDetailsById', cafeShopController.getCafeShopDetailsById);
 router.post('/createShopCafe', cafeShopController.createShopCafe);
 router.put('/updateShopCafe', cafeShopController.updateShopCafe);

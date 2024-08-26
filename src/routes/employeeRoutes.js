@@ -13,7 +13,8 @@ const router = express.Router();
 // API METHODS
 router.get('/getAllEmployee', employeeController.getAllEmployee);
 router.get('/getEmployeeDetailsById', employeeController.getEmployeeDetailsById);
-router.post('/submitEmployee', employeeController.submitEmployee);
+router.post('/createEmployee', employeeController.createEmployee);
+router.put('/updateEmployee', employeeController.updateEmployee);
 router.delete('/deleteEmployeeById', employeeController.deleteEmployeeById);
 
 module.exports = router;
