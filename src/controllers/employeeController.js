@@ -46,7 +46,6 @@ exports.getEmployeeDetailsById = async (req, res) => {
 exports.submitEmployee = async (req, res) => {
     const now = new Date();
     let { id, cafe_shop_id, email_address, gender, name, phone_number } = req.body;
-    console.log("cafe_shop_id: ", cafe_shop_id);
     /*if (id) {
         employees = employees.map(item => {
             if (item.id === id) {

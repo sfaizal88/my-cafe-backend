@@ -16,7 +16,6 @@ exports.getAllCafeShops = async (req, res) => {
     // res.json({ok: true, data: cafeShop});
     try {
         const [results] = await db.query(queries.SELECT_ALL_CAFE_SHOP);
-        console.log(results);
         res.status(200).json({ ok: true, data: results });
     } catch (err) {
         return res.status(500).json({ ok: false, error: err.message });
@@ -28,7 +27,6 @@ exports.getAllCafeShopsOptions = async (req, res) => {
     // res.json({ok: true, data: cafeShop});
     try {
         const [results] = await db.query(queries.SELECT_ALL_CAFE_SHOP_OPTIONS);
-        console.log(results);
         res.status(200).json({ ok: true, data: results });
     } catch (err) {
         return res.status(500).json({ ok: false, error: err.message });
