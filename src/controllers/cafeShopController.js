@@ -1,10 +1,17 @@
-// Import the v4 function from the uuid package
+/**
+ * Cafe shop controller
+ * @author - Faizal 
+ * @date - 25th August 2024
+ */
+// GENERIC IMPORT
 const { v4: uuidv4 } = require('uuid');
 const db = require('../config/dbConfig');
 const queries = require('../queries/cafeShopQueries.js');
 
+// DECLARE LOCAL VARIABLE
 let cafeShop = require('../data/cafeShop.js');
 
+// GET API
 exports.getAllCafeShops = async (req, res) => {
     // res.json({ok: true, data: cafeShop});
     try {
@@ -16,6 +23,7 @@ exports.getAllCafeShops = async (req, res) => {
     }
 };
 
+// GET API FOR OPTIONS
 exports.getAllCafeShopsOptions = async (req, res) => {
     // res.json({ok: true, data: cafeShop});
     try {
@@ -27,6 +35,7 @@ exports.getAllCafeShopsOptions = async (req, res) => {
     }
 };
 
+// GET API BY ID
 exports.getCafeShopDetailsById = async (req, res) => {
     const id = req.query.id;
     /* const cafe = cafeShop.find(c => c.id === id);
@@ -46,6 +55,7 @@ exports.getCafeShopDetailsById = async (req, res) => {
     }
 };
 
+// POST/PUT
 exports.submitShopCafe = async (req, res) => {
     const now = new Date();
     const { id, name, description, location } = req.body;
@@ -92,6 +102,7 @@ exports.submitShopCafe = async (req, res) => {
     }
 };
 
+// DELETE API
 exports.deleteShopCafeById = async (req, res) => {
     const id = req.query.id;
     /* const index = cafeShop.findIndex(c => c.id === id);

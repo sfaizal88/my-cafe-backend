@@ -1,9 +1,17 @@
+/**
+ * Employee controller
+ * @author - Faizal 
+ * @date - 25th August 2024
+ */
+// GENERIC IMPORT
 const helper = require('../utils/helper.js');
 const db = require('../config/dbConfig');
 const queries = require('../queries/employeeQueries.js');
 
+// DECLARE LOCAL VARIABLE
 let employees = require('../data/employee.js');
 
+// GET API
 exports.getAllEmployee = async (req, res) => {
     // res.json({ok: true, data: employees});
     try {
@@ -14,6 +22,7 @@ exports.getAllEmployee = async (req, res) => {
     }
 };
 
+// GET API BY ID
 exports.getEmployeeDetailsById = async (req, res) => {
     const id = req.query.id;
     /* const employee = employees.find(c => c.id === id);
@@ -33,6 +42,7 @@ exports.getEmployeeDetailsById = async (req, res) => {
     }
 };
 
+// POST/PUT
 exports.submitEmployee = async (req, res) => {
     const now = new Date();
     let { id, cafe_shop_id, email_address, gender, name, phone_number } = req.body;
@@ -87,6 +97,7 @@ exports.submitEmployee = async (req, res) => {
     }
 };
 
+// DELETE API
 exports.deleteEmployeeById = async (req, res) => {
     const id = req.query.id;
     /*const index = employees.findIndex(c => c.id === id);
