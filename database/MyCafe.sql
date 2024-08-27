@@ -18,8 +18,8 @@ USE MyCafe;
 
 CREATE TABLE `Cafes` (
   `id` varchar(150) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `description` varchar(500) NOT NULL,
+  `name` varchar(12) NOT NULL,
+  `description` varchar(300) NOT NULL,
   `location` varchar(200) NOT NULL,
   `date_created` datetime NOT NULL,
   `date_updated` datetime NOT NULL
@@ -33,7 +33,7 @@ CREATE TABLE `Cafes` (
 
 CREATE TABLE `Employees` (
   `id` varchar(9) NOT NULL,
-  `name` varchar(100) NOT NULL,
+  `name` varchar(12) NOT NULL,
   `email_address` varchar(255) NOT NULL,
   `phone_number` char(8) NOT NULL,
   `gender` varchar(1) NOT NULL,
