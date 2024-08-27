@@ -4,7 +4,7 @@
  * @date - 25th August 2024
  */
 // GET ALL CAFES LIST QUERY
-const SELECT_ALL_CAFE_SHOP= 'SELECT c.id, c.name, c.description, c.location, COUNT(e.id) AS total_employees FROM Cafes c LEFT JOIN Employees e ON c.id = e.cafe_shop_id GROUP BY c.id;'
+const SELECT_ALL_CAFE_SHOP= 'SELECT c.id, c.name, c.description, c.location, COUNT(e.id) AS total_employees FROM Cafes c LEFT JOIN Employees e ON c.id = e.cafe_shop_id GROUP BY c.id ORDER BY total_employees DESC;'
 
 // GET CAFE SHOP BY ID QUERY
 const SELECT_CAFE_SHOP_BY_ID = 'SELECT c.id, c.name, c.description, c.location, COUNT(e.id) AS total_employees FROM Cafes c LEFT JOIN Employees e ON c.id = e.cafe_shop_id WHERE c.id = ? GROUP BY c.id;';
